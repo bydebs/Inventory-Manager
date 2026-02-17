@@ -4,6 +4,10 @@ Sistema de gerenciamento de inventário com backend em Node.js e frontend em Rea
 
 ---
 
+Link do projeto em produção: [Clique aqui para acessar](https://inventory-manager-chi-eight.vercel.app)
+
+---
+
 ## Estrutura do Projeto
 
 ```
