@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Inventory-Manager
 ```
 projedata-test
@@ -90,4 +89,3 @@ npm run dev
 ## Diagrama de Classes
 
 Disponível em `1-documentation/class-diagram.png`.
->>>>>>> 445e6f2b61ea5e0cda16d14385f4a8aa248e9b07
