@@ -92,7 +92,9 @@ export default function Production() {
           {/* Valor Total Previsto */}
           <div className="mt-8 p-8 bg-gradient-to-r from-indigo-600 to-blue-700 rounded-3xl text-white shadow-xl shadow-indigo-200">
             <p className="text-sm font-bold uppercase opacity-80 tracking-widest">Total Potential Revenue</p>
-            <h2 className="text-5xl font-black">R$ {plan.totalRevenue.toFixed(2)}</h2>
+            <h2 className="text-3xl md:text-5xl font-black">
+              R$ {plan.totalRevenue.toFixed(2)}
+            </h2>
           </div>
         </div>
       ) : (
