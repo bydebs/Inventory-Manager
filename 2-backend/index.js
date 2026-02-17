@@ -6,7 +6,7 @@ const prisma = require("./prisma/client")
 dotenv.config()
 
 const app = express()
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000;
 
 app.use(cors())
 app.use(express.json())
@@ -213,6 +213,6 @@ app.post('/produce/:id', async (req, res) => {
 });
 
 
-app.listen(PORT, function(){
-    console.log(`Servidor rodando na porta http://localhost:${PORT}`)
-})
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server is running on port ${PORT}`);
+});
