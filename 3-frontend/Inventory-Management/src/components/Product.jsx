@@ -38,7 +38,7 @@ export default function Product() {
   return (
     <div>
       <h2>🪑 Register Products</h2>
-      <form onSubmit={handleSubmit} className="flex gap-4 items-center">
+      <form onSubmit={handleSubmit}>
         <input placeholder="Product Name" value={name} onChange={e => setName(e.target.value)} required />
         <input type="number" placeholder="Price" value={price} onChange={e => setPrice(e.target.value)} required />
         <button type="submit">{editingId ? 'Save' : 'Add Product'}</button>

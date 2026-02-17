@@ -44,7 +44,7 @@ export default function Materials() {
   return (
     <div>
       <h2>📦 Register Raw Materials</h2>
-      <form onSubmit={handleSubmit} className="flex gap-4 items-center">
+      <form onSubmit={handleSubmit}>
         <input placeholder="Name" value={name} onChange={e => setName(e.target.value)} required />
         <input type="number" placeholder="Stock" value={quantity} onChange={e => setQuantity(e.target.value)} required />
         <button   type="submit">{editingId ? 'Update' : 'Register'}</button>
