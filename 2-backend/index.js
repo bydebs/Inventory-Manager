@@ -134,62 +134,7 @@ app.delete('/product-materials/:id', async (req, res) => {
   }
 });
 
-// app.get('/production-suggestion', async function(req, res){
-//   // busca produtos ordenados pelo maior preço (Requisito de priorização)
-//   const products = await prisma.product.findMany({
-//     orderBy: { price: 'desc' },
-//     include: { materials: { include: { raw_material: true } } }
-//   });
 
-//   // busca estoque atual e cria um mapa temporário para simulação
-//   const rawMaterials = await prisma.rawMaterial.findMany();
-//   let tempStock = {};
-//   rawMaterials.forEach(m => tempStock[m.id] = m.stock_quantity);
-
-//   let productionPlan = [];
-//   let totalRevenue = 0;
-
-//   // lógica de simulação de produção
-//   products.forEach(product => {
-//     let possibleToProduce = true;
-//     let amountProduced = 0;
-
-//     // tenta produzir unidades enquanto houver estoque
-//     while (possibleToProduce) {
-//       // verifica se todos os ingredientes estão disponíveis para 1 unidade
-//       for (const item of product.materials) {
-//         if (tempStock[item.raw_material_id] < item.needed_quantity) {
-//           possibleToProduce = false;
-//           break;
-//         }
-//       }
-
-//       if (possibleToProduce) {
-//         // deduz do estoque temporário e incrementa produção
-//         product.materials.forEach(item => {
-//           tempStock[item.raw_material_id] -= item.needed_quantity;
-//         });
-//         amountProduced++;
-//       }
-//     }
-
-//     if (amountProduced > 0) {
-//       productionPlan.push({
-//         productId: product.id,
-//         productName: product.name,
-//         quantity: amountProduced,
-//         unitValue: product.price,
-//         subtotal: amountProduced * product.price
-//       });
-//       totalRevenue += (amountProduced * product.price);
-//     }
-//   });
-
-//   res.json({ productionPlan, totalRevenue });
-// });
-
-
-// No Backend (atendendo RF004 e RF007 em Inglês)
 app.get('/production-suggestion', async (req, res) => {
   // Busca produtos ordenados pelo maior preço (Requisito RF004) [cite: 7, 16]
   const products = await prisma.product.findMany({
