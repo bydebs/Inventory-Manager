@@ -1,9 +1,16 @@
-# Inventory-Manager
+# Inventory Manager
+
+Sistema de gerenciamento de inventário com backend em Node.js e frontend em React.
+
+---
+
+## Estrutura do Projeto
+
 ```
 projedata-test
-├─ 1-documentation
+├─ 1-documentation # Diagramas e documentação
 │  └─ class-diagram.png
-├─ 2-backend
+├─ 2-backend # API REST com Node.js + Prisma
 │  ├─ index.js
 │  ├─ package-lock.json
 │  ├─ package.json
@@ -14,7 +21,7 @@ projedata-test
 │     │  │  └─ migration.sql
 │     │  └─ migration_lock.toml
 │     └─ schema.prisma
-├─ 3-frontend
+├─ 3-frontend  # Interface com React + Vite
 │  └─ Inventory-Management
 │     ├─ eslint.config.js
 │     ├─ index.html
@@ -39,22 +46,6 @@ projedata-test
 └─ README.md
 
 ```
-=======
-# Inventory Manager
-
-Sistema de gerenciamento de inventário com backend em Node.js e frontend em React.
-
----
-
-## Estrutura do Projeto
-
-```
-projedata-test/
-├── 1-documentation/       # Diagramas e documentação
-├── 2-backend/             # API REST com Node.js + Prisma
-└── 3-frontend/            # Interface com React + Vite
-```
-
 ---
 
 ## Como Rodar
